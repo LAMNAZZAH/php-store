@@ -1,3 +1,4 @@
-<?php 
-echo "you are in index.php!"
+<?php  
+    require_once "../app/bootstrap.php";
+    $init = new Core;
 ?>
