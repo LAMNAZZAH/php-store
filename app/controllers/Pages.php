@@ -1,12 +1,18 @@
-<?php 
-    class Pages {
-        public function __construct()
-        {
-            echo 'Pages Loaded!';
-        }
-
-        public function create($user){
-            echo '<br/>';
-            echo 'create the user: ' . $user;
-        }
+<?php
+class Pages extends Controller
+{
+    public function __construct()
+    {
+        echo '<br/> Pages Loaded! <br/>';
     }
+
+    public function index($id = null)
+    {
+        $this->view('/pages/about', ['title' => $id]);
+    }
+
+    public function create($user)
+    {
+        $this->view('/pages/create', ['user' => $user, 'title' => 'create']);
+    }
+}
