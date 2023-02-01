@@ -1,9 +1,11 @@
 <?php
 class Pages extends Controller
 {
+    public $postModel;
+
     public function __construct()
     {
-        echo '<br/> Pages Loaded! <br/>';
+        
     }
 
     public function index($id = null)
