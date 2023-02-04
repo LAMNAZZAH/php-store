@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-.logo {
+.logo { 
   cursor: pointer;
 }
 
@@ -22,10 +23,11 @@ body {
   align-items: space-around;
   justify-content: center;
   align-self: flex-start;
+  z-index: 99;
 }
 
 .sub-nav {
-  height: 80px;
+  height: 12vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,6 +35,7 @@ body {
   background: linear-gradient(145deg, #f0f0f0, #faf2fa);
   box-shadow: 2px 5px 10px #bebebe, -20px -20px 60px #ffffff;
   gap: 2em;
+  z-index: 99;
   overflow: hidden;
 }
 
@@ -56,7 +59,7 @@ body {
 }
 
 .navbar {
-  height: 50px;
+  height: 8vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -101,7 +104,6 @@ body {
   color: black;
   scale: 101%;
 }
-
 
 .search-div {
   width: 90%;
@@ -170,4 +172,48 @@ body {
   font-family: poppins, sans-serif;
   font-weight: 700;
   color: #595959;
+}
+
+#mydiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  margin-top: 33px;
+  width: 100%;
+  height: 80vh;
+  background: purple;
+  font-weight: 700;
+  font-family: poppins, sans-serif;
+  padding: 1em;
+  border-right: 10px solid rgb(41, 41, 41);
+}
+
+
+#featured-product {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40vh;
+    height: 80vh;
+    width: 40vw;
+    background: url("../img/happyCustomer.jpg");
+    background-size: cover;
+    background-position: 200%;
+    background-color: rgb(245, 8, 59);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    z-index: -3;
+}
+
+.page-title {
+    background-color: rgb(241, 172, 241);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    color: #252121;
+    width: 99vw;   
+    font-size: 2rem;
+    z-index: 98;
+    font-family: poppins, sans-serif;
 }
