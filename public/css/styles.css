@@ -4,7 +4,7 @@ body {
   overflow-x: hidden;
 }
 
-.logo { 
+.logo {
   cursor: pointer;
 }
 
@@ -27,13 +27,12 @@ body {
 }
 
 .sub-nav {
-  height: 12vh;
+  height: 7em;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #f0f0f0, #faf2fa);
-  box-shadow: 2px 5px 10px #bebebe, -20px -20px 60px #ffffff;
+  box-shadow: -10px -10px 30px #bedafc;
   gap: 2em;
   z-index: 99;
   overflow: hidden;
@@ -49,23 +48,23 @@ body {
   align-items: center;
   justify-content: center;
   flex: 0.5;
+  background-image: url("../img/adSample.jpg");
 }
 
 .pub {
-  height: 100%;
-  background-color: white;
+  background-position: 100%;
+  height: 100px;
   margin: 0.2em;
   width: 100%;
 }
 
 .navbar {
-  height: 8vh;
+  height: 0.6em;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(145deg, #f0f0f0, #eaeaea);
-  box-shadow: 2px 5px 10px #bebebe, -20px -20px 60px #ffffff;
+  background: linear-gradient(145deg, #fffab7, #ffffff);
   padding: 1.5em 0;
   margin: 0;
 }
@@ -95,7 +94,8 @@ body {
   justify-content: center;
   color: black;
   font-family: poppins, sans-serif;
-  font-weight: 700;
+  font-size: 0.8em;
+  font-weight: 600;
   cursor: pointer;
   align-self: center;
 }
@@ -115,10 +115,12 @@ body {
 
 .search-input {
   border: none;
-  border-radius: 0.5em;
+  border-radius: 2em;
   height: 3em;
   width: 100%;
   padding: 0 1.5em;
+  border: 2px solid #5d5d5d;
+
 }
 
 .search-img {
@@ -131,12 +133,11 @@ body {
 }
 
 .sign-in {
-  align-self: flex-start;
 }
 
 .sign-in-btn {
-  margin-top: 0.5em;
-  padding: 12px 33px;
+  padding: 9px 25px;
+  margin-bottom: 7px;
   border-radius: 10px;
   border: 0;
   background-color: rgb(255, 56, 86);
@@ -161,59 +162,213 @@ body {
 }
 
 .nav-icon {
-  scale: 70%;
-  opacity: 70%;
+  scale: 60%;
 }
 
 .phone {
   width: 70%;
-  height: 1em;
+  margin-bottom: 0.5em;
+  height: 0.5em;
   letter-spacing: 0.3em;
+  font-size: 15px;
   font-family: poppins, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   color: #595959;
 }
 
-#mydiv {
+#featured-product {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  position: fixed;
-  margin-top: 33px;
-  width: 100%;
-  height: 80vh;
-  background: purple;
-  font-weight: 700;
-  font-family: poppins, sans-serif;
-  padding: 1em;
-  border-right: 10px solid rgb(41, 41, 41);
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-width: 100vw;
+  height: 110vh;
+  background-color: #0057f7;
+  min-height: fit-content;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0;
 }
 
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: fit-content;
+  max-width: 70vw;
+  flex: 1;
+  height: fit-content;
+}
 
-#featured-product {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 40vh;
-    height: 80vh;
-    width: 40vw;
-    background: url("../img/happyCustomer.jpg");
-    background-size: cover;
-    background-position: 200%;
-    background-color: rgb(245, 8, 59);
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-    z-index: -3;
+.product-headline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 1em;
+  margin-bottom: 1em;
+}
+
+.product .product-title {
+  font-size: 3em;
+  font-weight: 700;
+  font-family: poppins;
+}
+
+.product-subtitle {
+  font-size: 18px;
+  font-family: poppins;
+}
+
+.product-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  border-radius: 43% 57% 70% 30% / 63% 67% 33% 37%;
+  width: 40vh;
+  background-image: linear-gradient(135deg, #e8f6ff 0%, #dbddff 100%);
+  z-index: 3;
+  margin: 1em 2em;
+}
+
+.product-image img {
+  height: 120%;
+  width: 120%;
+  object-fit: contain;
+  transform: rotate(25deg);
+}
+
+.product-price {
+  position: absolute;
+  bottom: -1em;
+  right: -1em;
+  font-family: poppins;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.product-old-price {
+  color: red;
+  text-decoration: line-through 2px rgb(255, 0, 0);
+}
+
+.product-offer-price {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+.product-action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 20vh;
+  gap: 0.5em;
+  z-index: 3;
+}
+
+.buy-now-btn {
+  position: relative;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  font-family: poppins;
+  font-weight: 800;
+  border: 3px solid black;
+  background-color: #fac800;
+  cursor: pointer;
+}
+
+.buy-now-btn:hover {
+  box-shadow: 3px 3px black;
+}
+
+.see-details-btn {
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+  font-family: poppins;
+  font-weight: 700;
+  border: 3px solid black;
+  background-color: #fff2bd;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.see-details-btn:hover {
+  box-shadow: 3px 3px black;
+}
+
+.box-div {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  height: 100px;
+  width: 100px;
+  z-index: -1;
+  border-radius: 66% 34% 70% 30% / 65% 69% 31% 35%;
+  background-color: #fff2bd;
+}
+
+#featured-product-image {
+  height: 100%;
+  width: 40vw;
+  background: url("../img/happyCustomer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-color: rgb(245, 8, 59);
+  border-left: 40px solid #0057f7;
 }
 
 .page-title {
-    background-color: rgb(241, 172, 241);
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: absolute;
-    color: #252121;
-    width: 99vw;   
-    font-size: 2rem;
-    z-index: 98;
-    font-family: poppins, sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #0057f7;
+  background-color: #ffffff;
+  width: 100vw;
+  z-index: 98;
+  margin: 0;
+  margin-top: 10em;
+  font-family: poppins, sans-serif;
+}
+
+#main-page-title {
+  opacity: 0;
+  margin-top: 1em;
+  transition: margin-top 1s ease-in-out;
+}
+
+.page-title h1 {
+  margin-left: 1em;
+  font-size: 4em;
+}
+
+.page-title span {
+  color: rgb(255, 217, 0);
+  text-shadow: 4px 4px 0 #383636, 2px 2px 0.1em rgb(73, 72, 73);
+}
+
+/* Best Products section */
+
+#best-products {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  height: 50vh;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  margin: 0;
+}
+
+#best-products h1 {
+  position: absolute;
+  z-index: 98;
+  top: -1.45em;
+  color: white;
+  font-size: 4em;
 }

@@ -13,8 +13,8 @@ class Pages extends Controller
         $this->view('/pages/about', ['title' => $id]);
     }
 
-    public function create($user)
+    public function mainPage($user)
     {
-        $this->view('/pages/create', ['user' => $user, 'title' => 'create']);
+        $this->view('/pages/mainpage', ['user' => $user, 'title' => 'Main Page']);
     }
 }
