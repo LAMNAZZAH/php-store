@@ -17,10 +17,11 @@
                     'password' => '',
                     'password_err' => '',
                     'confirm_password' => '',
-                    'confirm_password_err' => ''
+                    'confirm_password_err' => '',
                 ];
 
-                $this->view('users/register');
+                $this->view('/users/register', $data);
             }
         }
     }
+?>

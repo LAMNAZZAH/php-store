@@ -13,8 +13,8 @@ window.onscroll = function () {
   let featuredProduct = document.getElementById("featured-product-image");
   
 
-  featuredProduct.style.padding = 100-prevScrollPos > 0 ? 100-prevScrollPos+"px" : 0+"px";
-
+/*   featuredProduct.style.padding = 100-prevScrollPos > 0 ? 100-prevScrollPos+"px" : 0+"px";
+ */
 
 /*   if (prevScrollPos < screenHeight) {
     mydiv.style.width = Math.max(100 - prevScrollPos, 50) + "px";
@@ -35,5 +35,11 @@ window.onscroll = function () {
       : 120 + 100 - prevScrollPos > 8
       ? 120 + 100 - prevScrollPos 
       : 0) + "px";
-  navbar.style.opacity = Math.max(100 - prevScrollPos / 10, 50) + "%";
+  navbar.style.opacity = Math.max(100 - prevScrollPos / 20, 50) + "%";
+  navbar.onmouseover = function() {
+    navbar.style.opacity = 1;
+  }
+  navbar.onmouseleave = function() {
+    navbar.style.opacity = Math.max(100 - prevScrollPos / 20, 50) + "%";
+  }
 };

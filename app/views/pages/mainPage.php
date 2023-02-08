@@ -2,10 +2,10 @@
 <!-- <h1>Create a user</h1>
 <br />
 <h2>provided <?php echo ':' . $data['user'] ?></h2> -->
-<section id="main-page-title" class="page-title">
-    <h1>The <span>Ultimate</span> Shopping Experience</h1>
-</section>
 <section id="featured-product">
+<div id="main-page-title" class="page-title">
+    <h1>The <span>Ultimate</span> Shopping Experience</h1>
+</div>
 <div id="featured-product-image"> 
 </div>
 <div class="product">
