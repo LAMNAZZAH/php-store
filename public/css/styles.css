@@ -8,7 +8,8 @@ body {
   cursor: pointer;
 }
 
-.logo a,h1 {
+.logo a,
+h1 {
   text-decoration: none;
   padding: 0;
   font-family: poppins, sans-serif;
@@ -36,11 +37,41 @@ body {
   gap: 2em;
   z-index: 99;
   overflow: hidden;
+  box-shadow: 2px 2px 1px white;
   background-color: #0057f7;
 }
 
 #navigationbar:hover {
   opacity: 100%;
+}
+
+.search-tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  width: 100%;
+  height: 50%;
+  align-self: flex-end;
+}
+
+.search-tags div {
+  background-color: #fac800;
+  border: 3px solid white;
+  color: white;
+  border-radius: 2em;
+  font-family: poppins;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.3em 0.4em;
+}
+
+.search-tags div:hover {
+  background-color: white;
+  border: 3px solid #fac800;
+  color: #2e2e2e;
+  transform: rotate(-5deg);
 }
 
 .publicity {
@@ -73,8 +104,9 @@ body {
 .navbar ul {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   list-style: none;
+  align-self: center;
   gap: 1em;
 }
 
@@ -83,7 +115,6 @@ body {
 }
 
 .search {
-  height: 100%;
   display: flex;
   align-items: flex-start;
   gap: 0.5em;
@@ -100,9 +131,7 @@ body {
   color: black;
   font-family: poppins, sans-serif;
   font-size: 0.8em;
-  font-weight: 600;
   cursor: pointer;
-  align-self: center;
 }
 
 .navbar ul li:hover {
@@ -125,7 +154,7 @@ body {
   width: 100%;
   padding: 0 1.5em;
   border: 3px solid #fac800;
-
+  z-index: 99;
 }
 
 .search-img {
@@ -171,28 +200,42 @@ body {
 }
 
 .phone {
+  position: relative;
   width: 70%;
   margin-bottom: 0.5em;
   height: 0.5em;
   letter-spacing: 0.3em;
-  font-size: 15px;
+  font-size: 20px;
   font-family: poppins, sans-serif;
+  white-space: nowrap;
   font-weight: 500;
   color: white;
 }
 
+.phone span {
+  position: absolute;
+  top: -0.7em;
+  left: -1em;
+  font-weight: 800;
+  font-size: 3.5em;
+  color: white;
+  white-space: nowrap;
+  opacity: 50%;
+}
+
 #featured-product {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-height: max-content;
+  min-height: max-content;
   min-width: 100vw;
-  height: 110vh;
-  background-color: #0057f7;
-  min-height:min-content;
-  overflow: hidden;
+  background-color: black;
+  min-height: max-content;
   z-index: 1;
-  margin: 0;
+  /*margin: 0;*/
+  margin-top: 10.5em;
 }
 
 .product {
@@ -200,10 +243,13 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-height: 80vh;
-  max-width: 100%;
-  flex: .5;
-  height: fit-content;
+  min-height: inherit;
+  height: max-content;
+  padding: 1em 3em;
+  width: max-content;
+  flex-grow: 1;
+  align-self: flex-start;
+  background-color: #0057f7;
 }
 
 .product-headline {
@@ -211,21 +257,21 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  margin-bottom: .5em;
+  margin-bottom: 0.2em;
   max-width: 100%;
-  z-index: 100;
 }
 
 .product .product-title {
-  margin-top: 2em;
   font-size: 2em;
   font-weight: 700;
   font-family: poppins;
+  color: white;
 }
 
 .product-subtitle {
-  font-size: 18px;
+  font-size: 15px;
   font-family: poppins;
+  color: white;
 }
 
 .product-image {
@@ -235,7 +281,7 @@ body {
   justify-content: center;
   height: 40vh;
   border-radius: 43% 57% 70% 30% / 63% 67% 33% 37%;
-  width: 40vh;
+  width: 70%;
   background-image: linear-gradient(135deg, #e8f6ff 0%, #dbddff 100%);
   z-index: 3;
   margin: 1em 2em;
@@ -276,11 +322,12 @@ body {
   height: 20vh;
   gap: 0.5em;
   z-index: 3;
+  white-space: nowrap;
 }
 
 .buy-now-btn {
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0.5em 1em;
   font-family: poppins;
   font-weight: 800;
@@ -294,7 +341,7 @@ body {
 }
 
 .see-details-btn {
-  font-size: 1.1em;
+  font-size: 0.8em;
   padding: 0.5em 1em;
   font-family: poppins;
   font-weight: 700;
@@ -320,31 +367,28 @@ body {
 }
 
 #featured-product-image {
-  height: 100%;
+  align-self: stretch;
   width: 40vw;
   background: url("../img/happyCustomer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50%;
-  flex: .3;
-  background-color: rgb(245, 8, 59);
+  background-position: 40%;
+  flex-shrink: 3;
+  background-color: #fac800;
 }
 
 .page-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   color: #0057f7;
-  background-color: #ffffff;
+  background-color: #fac800;
+  height: inherit;
   z-index: 98;
   margin: 0;
   font-family: poppins, sans-serif;
-  flex: .3;
-}
-
-#main-page-title {
-  opacity: 0;
-  transition: margin-top 1s ease-in-out;
+  flex: 0.2;
+  flex-grow: 1;
 }
 
 .page-title h1 {
@@ -352,8 +396,8 @@ body {
 }
 
 .page-title span {
-  color: rgb(255, 217, 0);
-  text-shadow: 4px 4px 0 #383636, 2px 2px 0.1em rgb(73, 72, 73);
+  color: #fac800;
+  text-shadow: 8px 2px 0 #383636, 2px 2px 2px rgb(73, 72, 73);
 }
 
 /* Best Products section */
@@ -373,7 +417,7 @@ body {
 #best-products h1 {
   position: absolute;
   z-index: 98;
-  top: -1.45em;
+  top: -1.5em;
   color: white;
   font-size: 4em;
 }

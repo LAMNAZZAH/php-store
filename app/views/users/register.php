@@ -40,7 +40,7 @@
         </div>
         <div class="right-block">
             <div class="right-block-headline">
-                <div class="headline">With One Click <br> <span>Buy And Wait</span></div>
+                <div class="headline">Like If<br> <span>You're Here!</span></div>
             </div>
             <div class="background-shape-one"></div>
             <div class="background-shape-two"></div>

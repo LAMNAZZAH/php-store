@@ -27,7 +27,9 @@
     flex-direction: column;
     flex: .4;
     height: 100%;
-    background-color: #fac800;
+    background-color: #0057f7;
+    /*background-image: url("../img/register-star.svg");*/
+    background-blend-mode:luminosity;
 }
 
 .right-block-headline {
@@ -36,7 +38,7 @@
     justify-content: center;
     font-weight: 700;
     margin-top: 1.2em;
-    font-size: 3em;
+    font-size: 3.4em;
     font-family: poppins,sans-serif;
     color: #5d5b70;
     width: 100%;
@@ -73,11 +75,11 @@
 .left-block .title span {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 10%;
     z-index: -1;
     font-size: 1.5em;
-    text-shadow: 0 0 4px black;
-    color: #fac800;
+    text-shadow: 0 0 2px black;
+    color: #0057f7;
     opacity: 40%;
 }
 
@@ -116,7 +118,7 @@
     padding-left: 1.5em;
     font-size: 1.1em;
     border: none;
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 2px #595858;
     color: #2e2e2e;
 }
 
@@ -127,7 +129,7 @@
 .form-group input::placeholder {
     font-size: .8em;
     font-weight: 600;
-    color: #fac800;
+    color: #5d5b70;
     opacity: 40%;
 }
 
@@ -155,7 +157,7 @@
     height: 3em;
     width: 8em;
     border-radius: 2em;
-    background-color: #fffab7;
+    background-color: white;
     border: 2px solid #595858;
     color: #2e2e2e;
     cursor: pointer;
@@ -167,7 +169,6 @@
     color: #0057f7;
     background-color: #fac800;
     border: none;
-    border-bottom: 2px solid black;
 }
 
 .submit-btn:active {
@@ -185,28 +186,26 @@
 }
 
 .background-shape-one {
-    scale: 110%;
-    background-color: #0057f7;
-    opacity: 50%;
+    scale: 100%;
+    background-color: white;
+    opacity: 100%;
 }
 
 .background-shape-two {
     border-radius: 53% 47% 70% 30% / 57% 57% 43% 43% ;
     background-color:white;
     scale: 90%;
-    border: 5px solid #0057f7;
+    border: 10px solid #595858;
     background-image: url("../img/register-safe.jpg");
     background-position: 35%;
     background-size: 200%;
 }
 
-.shape01, .shape02, .shape03 {
+.shape03 {
     position: absolute;
     height: 10em;
     width: 10em;
     margin-top: 3em;
-}
-.shape03 {
     right: -.8em;
     bottom: -1.5em;
 }

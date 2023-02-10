@@ -29,7 +29,7 @@
 </div>
 </section>
 <section id="best-products">
-<h1>Best Products</h1>
+<h1>Most Loved</h1>
 </section>
 
 <div id="div2" style="background:red;height:5000px;position:sticky;z-index:-5;width:100vw;"></div>
