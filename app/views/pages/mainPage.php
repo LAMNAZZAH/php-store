@@ -30,6 +30,40 @@
 </section>
 <section id="best-products">
 <h1>Most Loved</h1>
+     <div class="loved-product">
+<div class="loved-top-section">
+    <div class="loved-price">15 <span>$</span></div>
+    <div class="loved-addtoloved">
+        <img src=<?php echo URLROOT . "/public/img/addtoloved.svg" ?> alt="" srcset="">
+    </div>
+</div>
+<div class="loved-middle-section">
+    <img src=<?php echo URLROOT . "/public/img/lovedprod1.jpg" ?> alt="" srcset="">
+</div>
+<div class="loved-bottom-section">Balaca De Macillage Gatito, standard edition limited</div>
+   </div> <div class="loved-product">
+<div class="loved-top-section">
+    <div class="loved-price">15 <span>$</span></div>
+    <div class="loved-addtoloved">
+        <img src=<?php echo URLROOT . "/public/img/addtoloved.svg" ?> alt="" srcset="">
+    </div>
+</div>
+<div class="loved-middle-section">
+    <img src=<?php echo URLROOT . "/public/img/lovedprod1.jpg" ?> alt="" srcset="">
+</div>
+<div class="loved-bottom-section">Balaca De Macillage Gatito, standard edition limited</div>
+   </div> <div class="loved-product">
+<div class="loved-top-section">
+    <div class="loved-price">15 <span>$</span></div>
+    <div class="loved-addtoloved">
+        <img src=<?php echo URLROOT . "/public/img/addtoloved.svg" ?> alt="" srcset="">
+    </div>
+</div>
+<div class="loved-middle-section">
+    <img src=<?php echo URLROOT . "/public/img/lovedprod1.jpg" ?> alt="" srcset="">
+</div>
+<div class="loved-bottom-section">Balaca De Macillage Gatito, standard edition limited</div>
+   </div> 
 </section>
 
 <div id="div2" style="background:red;height:5000px;position:sticky;z-index:-5;width:100vw;"></div>
