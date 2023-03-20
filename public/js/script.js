@@ -7,8 +7,12 @@ window.onscroll = function () {
   let prevScrollPos = window.scrollY;
   let subnav = document.getElementById("subnavigation");
   let navbar = document.getElementById("navigationbar");
-  let mydiv = document.getElementById("mydiv");
-  let featuredProduct = document.getElementById("featured-product-image");
+  let mostLoved = document.getElementById("most-loved");
+
+
+  mostLoved.style.left = Math.min(100, prevScrollPos/3) + "px";
+
+  console.log(prevScrollPos);
   
 
   subnav.style.height =
