@@ -1,10 +1,12 @@
 <?php
     class Users extends Controller {
+        private $userModel;
+
         public function __construct()
         {
-            
+            $this->userModel = $this->model('User');
         }
-
+ 
         public function register(){
             if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -30,6 +32,8 @@
                     $data['email_err'] = 'please enter email';
                 } else if (preg_match($email_pattern, $data['email']) != 1) {
                     $data['email_err'] = 'invalid email';
+                } else if ($this->userModel->findUserByEmail($data['email'])) {
+                    $data['email_err'] = 'email is already taken';
                 }
 
                 if (empty($data['password'])) {
@@ -77,6 +81,10 @@
 
                  if(empty($data['email'])) {
                     $data['email_err'] = 'please make sure you enter a valid email';
+                 } else {
+                    if ($this->userModel->findUserByEmail($data['email'])) {
+
+                    }
                  }
 
                  if(empty($data['password'])) {
@@ -84,7 +92,7 @@
                  }
 
                  if(empty($data['email_err']) && empty($data['password_err'])) {
-                    die('SUCCESS');
+                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                  } else {
                     $this->view('/users/login', $data);
                  }
@@ -92,9 +100,11 @@
             } else {
                 $data = [
                     'email' => '',
+                    'email_err' => '',
                     'password' => '',
+                    'password_err' => ''
                 ];
-
+;
                 $this->view('/users/login', $data);
             }
         }

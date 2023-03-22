@@ -167,7 +167,7 @@
     color: #2e2e2e;
     cursor: pointer;
     align-self: flex-end;
-    margin-right: 2em;
+    margin-left: 1em;
 }
 
 .submit-btn:hover {
