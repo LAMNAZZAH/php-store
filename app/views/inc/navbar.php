@@ -20,7 +20,7 @@
             </li>
         </ul>
         <div class="sign-in">
-            <a href=<?php echo URLROOT . "/users/register"; ?>><button class="sign-in-btn">SIGN IN</button></a>
+            <a href=<?php echo URLROOT . "/users/register"; ?>><button class="sign-in-btn">Sign In</button></a>
         </div>
     </nav>
     <?php

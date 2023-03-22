@@ -14,7 +14,7 @@
     $URL = $_SERVER["REQUEST_URI"];
     $array = explode('/', $URL);
     if ($array[2] == 'users') {
-        echo "<link rel=\"stylesheet\" href=" . URLROOT . "/public/css/register.css />";
+        echo "<link rel=\"stylesheet\" href=" . URLROOT . "/public/css/users.css />";
     }
     ?>
     <script src=<?php echo URLROOT . "/public/js/script.js" ?>></script>

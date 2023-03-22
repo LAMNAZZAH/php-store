@@ -1,6 +1,6 @@
 
 
-.register-page {
+.register-page, .login-page {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +10,7 @@
     overflow: hidden;
 }
 
-.register {
+.register, .login {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,10 +97,11 @@
 }
 
 .form-group span {
-    color: rgb(255, 0, 0);
-    font-weight: 500;
+    color: rgb(238, 55, 55);
+    font-weight: 400;
     font-family: poppins, sans-serif;
     margin-left: 1em;
+    font-size: 15px;
 }
 
 .form-group label {
@@ -122,6 +123,10 @@
     color: #2e2e2e;
 }
 
+.form-group input:focus-within {
+    outline: 1px solid #0057f7;
+}
+
 .form-group .invalid-input {
     box-shadow: 0 2px 2px red;
 }
@@ -133,11 +138,12 @@
     opacity: 40%;
 }
 
-.login-group {
+.login-group, .register-group {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-left: 2em;
+    margin-bottom: 1em;
     width: 80%;
 }
 
@@ -148,7 +154,6 @@
    font-size: 1em;
    color: #0057f7;
    cursor: pointer;
-
 }
 
 .submit-btn {
